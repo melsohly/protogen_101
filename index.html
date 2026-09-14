@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="weather.js" defer></script>
   </head>
   <body>
     <main class="hero">
@@ -59,7 +60,18 @@
         </nav>
       </section>
 
-      <p class="scroll-note" aria-hidden="true">Welcome in <span>✦</span></p>
+      <div class="weather-ticker" aria-label="Local weather" role="status">
+        <div class="weather-track">
+          <span class="weather-item" data-weather-item>Checking local weather...</span>
+          <span class="weather-divider" aria-hidden="true">✦</span>
+          <span class="weather-item" data-weather-item>Checking local weather...</span>
+          <span class="weather-divider" aria-hidden="true">✦</span>
+          <span class="weather-item" data-weather-item>Checking local weather...</span>
+          <span class="weather-divider" aria-hidden="true">✦</span>
+          <span class="weather-item" data-weather-item>Checking local weather...</span>
+          <span class="weather-divider" aria-hidden="true">✦</span>
+        </div>
+      </div>
     </main>
   </body>
 </html>

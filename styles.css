@@ -188,22 +188,41 @@ h1 em {
   line-height: 1;
 }
 
-.scroll-note {
+.weather-ticker {
   position: absolute;
   bottom: 2.25rem;
+  left: 0;
+  width: 100%;
   z-index: 1;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.66);
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.scroll-note span {
-  display: inline-block;
-  margin-left: 0.4rem;
+.weather-track {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 0.8rem 1.5rem;
+  animation: ticker-scroll 28s linear infinite;
+}
+
+.weather-item {
+  flex: 0 0 auto;
+}
+
+.weather-divider {
+  flex: 0 0 auto;
   color: #edc4ff;
-  animation: twinkle 2s ease-in-out infinite;
 }
 
 .subpage {
@@ -299,15 +318,12 @@ h1 em {
   }
 }
 
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.45;
-    transform: scale(0.9);
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
   }
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
+  to {
+    transform: translateX(-25%);
   }
 }
 
@@ -331,6 +347,24 @@ h1 em {
     font-size: 0.98rem;
   }
 
+  .weather-ticker {
+    bottom: 1.25rem;
+  }
+
+  .weather-track {
+    gap: 1.25rem;
+    padding: 0.7rem 1rem;
+  }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .weather-track,
+  .intro,
+  .hello-line,
+  .world-line {
+    animation: none;
+  }
+}
   .page-links {
     grid-template-columns: 1fr;
     margin-top: 2rem;
