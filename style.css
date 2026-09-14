@@ -27,9 +27,7 @@ body {
   place-items: center;
   padding: 4rem 1.5rem 5rem;
   background:
-    radial-gradient(circle at 75% 16%, rgba(235, 180, 255, 0.28), transparent 25rem),
-    radial-gradient(circle at 12% 85%, rgba(83, 18, 47, 0.42), transparent 28rem),
-    linear-gradient(45deg, #3b1028 0%, #68245f 48%, #9b67d5 100%);
+
 }
 
 .hero::before {
