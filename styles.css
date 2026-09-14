@@ -188,46 +188,30 @@ h1 em {
   line-height: 1;
 }
 
-.weather-ticker {
-  position: absolute;
-  bottom: 2.25rem;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+.weather-panel {
+  display: flex;
+  width: min(100%, 28rem);
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
-.weather-track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  animation: ticker-scroll 28s linear infinite;
-}
-
-.weather-group {
-  display: flex;
-  min-width: 100vw;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  padding: 0.8rem 1.5rem;
-}
-
-.weather-item {
-  flex: 0 0 auto;
-}
-
-.weather-divider {
-  flex: 0 0 auto;
+.weather-icon {
   color: #edc4ff;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.weather-details {
+  text-align: center;
 }
 
 .subpage {
@@ -323,15 +307,6 @@ h1 em {
   }
 }
 
-@keyframes ticker-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-25%);
-  }
-}
-
 @media (max-width: 520px) {
   .hero {
     padding: 3rem 1.25rem 4.5rem;
@@ -352,22 +327,15 @@ h1 em {
     font-size: 0.98rem;
   }
 
-  .weather-ticker {
-    bottom: 1.25rem;
-  }
-
-  .weather-track {
-    animation-duration: 24s;
-  }
-
-  .weather-group {
-    gap: 1.25rem;
-    padding: 0.7rem 1rem;
+  .weather-panel {
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+    padding-top: 1rem;
+    font-size: 0.7rem;
   }
 
 
 @media (prefers-reduced-motion: reduce) {
-  .weather-track,
   .intro,
   .hello-line,
   .world-line {
