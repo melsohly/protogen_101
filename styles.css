@@ -120,6 +120,55 @@ h1 em {
   transform: translateY(-3px);
 }
 
+.page-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  width: min(100%, 28rem);
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.page-link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.8rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.page-link:hover,
+.page-link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.page-link-label {
+  grid-column: 1 / -1;
+  color: var(--lilac);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.page-link-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.page-link-arrow {
+  align-self: end;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .scroll-note {
   position: absolute;
   bottom: 2.25rem;
@@ -136,6 +185,44 @@ h1 em {
   margin-left: 0.4rem;
   color: #edc4ff;
   animation: twinkle 2s ease-in-out infinite;
+}
+
+.subpage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem max(2rem, 8vw);
+  background:
+    radial-gradient(circle at 80% 15%, rgba(235, 180, 255, 0.24), transparent 25rem),
+    linear-gradient(45deg, #3b1028 0%, #68245f 48%, #9b67d5 100%);
+}
+
+.back-link {
+  width: fit-content;
+  margin-bottom: 6rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.subpage h1 {
+  max-width: 42rem;
+  font-size: clamp(4rem, 12vw, 8rem);
+}
+
+.subpage-copy {
+  max-width: 30rem;
+  margin: 2rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .glow {
@@ -201,5 +288,10 @@ h1 em {
   .welcome-copy {
     margin-top: 1.5rem;
     font-size: 0.98rem;
+  }
+
+  .page-links {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
   }
 }
