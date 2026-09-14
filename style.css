@@ -334,16 +334,16 @@ h1 em {
     font-size: 0.7rem;
   }
 
+  .page-links {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .intro,
   .hello-line,
   .world-line {
     animation: none;
-  }
-}
-  .page-links {
-    grid-template-columns: 1fr;
-    margin-top: 2rem;
   }
 }
