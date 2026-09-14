@@ -149,8 +149,8 @@ h1 em {
 }
 
 .page-link {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  align-items: center;
   gap: 0.65rem;
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.28);
@@ -170,7 +170,6 @@ h1 em {
 }
 
 .page-link-label {
-  grid-column: 1 / -1;
   color: var(--lilac);
   font-size: 0.68rem;
   font-weight: 700;
@@ -178,6 +177,7 @@ h1 em {
 }
 
 .page-link-title {
+  flex: 1;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.2rem;
 }
