@@ -122,6 +122,12 @@ h1 em {
   transform: translateY(-3px);
 }
 
+.contact-address {
+  margin: 0.75rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+}
+
 .page-links {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
