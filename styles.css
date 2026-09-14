@@ -91,6 +91,23 @@ h1 em {
   font-style: italic;
 }
 
+.hello-line,
+.world-line {
+  display: inline-block;
+  animation-duration: 850ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hello-line {
+  animation-name: slide-in-left;
+}
+
+.world-line {
+  animation-name: slide-in-right;
+  animation-delay: 120ms;
+}
+
 .welcome-copy {
   width: min(100%, 28rem);
   margin: 2rem auto 2.25rem;
@@ -257,6 +274,28 @@ h1 em {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
