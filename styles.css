@@ -94,7 +94,7 @@ h1 em {
 .hello-line,
 .world-line {
   display: inline-block;
-  animation-duration: 850ms;
+  animation-duration: 1.2s;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -105,7 +105,7 @@ h1 em {
 
 .world-line {
   animation-name: slide-in-right;
-  animation-delay: 120ms;
+  animation-delay: 180ms;
 }
 
 .welcome-copy {
