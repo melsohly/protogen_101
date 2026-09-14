@@ -208,12 +208,17 @@ h1 em {
 .weather-track {
   display: flex;
   width: max-content;
-  min-width: 100%;
+  align-items: center;
+  animation: ticker-scroll 28s linear infinite;
+}
+
+.weather-group {
+  display: flex;
+  min-width: 100vw;
   align-items: center;
   justify-content: space-around;
   gap: 2rem;
   padding: 0.8rem 1.5rem;
-  animation: ticker-scroll 28s linear infinite;
 }
 
 .weather-item {
@@ -352,6 +357,10 @@ h1 em {
   }
 
   .weather-track {
+    animation-duration: 24s;
+  }
+
+  .weather-group {
     gap: 1.25rem;
     padding: 0.7rem 1rem;
   }
